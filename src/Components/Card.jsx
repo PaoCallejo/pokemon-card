@@ -3,25 +3,25 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import {CardActionArea} from '@mui/material';
 
 export default function ActionAreaCard() {
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{maxWidth: 345}}>
             <CardActionArea>
                 <CardMedia
                     component="img"
                     height="180"
-                   // image={pokemonData.image}
+                    // image={pokemonData.image}
                     image="/static/images/cards/contemplative-reptile.jpg"
                     alt="green iguana"//Name Pokemon
-                   // alt={pokemonData.name}
+                    // alt={pokemonData.name}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        this is  proof Lizards are a widespread group of squamate reptiles, with over 6,000
+                        this is proof Lizards are a widespread group of squamate reptiles, with over 6,000
                         species, ranging across all continents except Antarctica
                     </Typography>
                 </CardContent>
