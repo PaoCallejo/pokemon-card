@@ -20,16 +20,18 @@ const PokemonCard = ({data}: { data: Pokemon }) => {
                     <Typography gutterBottom variant="h5" component="div" style={{color: 'blue'}}>
                         {data.name.toUpperCase()}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" style={{color: 'black'}}>
-                        Ability: {data.description[0].ability.name}
+
+                    <Typography variant="body2" color="text.secondary">
+                        <p>
+                            Description: {data.description.slice(0, 2).map((ability, i) => (
+                            i === 0 ? ability.ability.name : `, ${ability.ability.name}`
+                        ))}
+                        </p>
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" style={{color: 'black'}}>
-                        Description: none
-                    </Typography>
+
                 </CardContent>
             </CardActionArea>
         </Card>
     );
 }
-
 export default PokemonCard;
