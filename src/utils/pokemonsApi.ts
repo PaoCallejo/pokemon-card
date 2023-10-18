@@ -1,4 +1,3 @@
-
 export interface Pokemon {
     name: string;
     image: string;
@@ -6,7 +5,7 @@ export interface Pokemon {
 }
 export const getPokemons = async (): Promise<Pokemon[]> => {
     try {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=30");
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=150");
         const data = await response.json();
         const results = data.results;
 
