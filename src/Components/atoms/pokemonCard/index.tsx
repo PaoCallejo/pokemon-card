@@ -5,9 +5,13 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import {Pokemon} from "../../../utils/pokemonsApi";
+import { Outlet, Link } from "react-router-dom";
 
 const PokemonCard = ({data}: { data: Pokemon }) => {
+    const urlDetail: string = "details/" + data.id;
     return (
+        <Link to={urlDetail}>
+
         <Card sx={{maxWidth: 345, backgroundColor: 'lightblue'}}>
             <CardActionArea>
                 <CardMedia
@@ -32,6 +36,8 @@ const PokemonCard = ({data}: { data: Pokemon }) => {
                 </CardContent>
             </CardActionArea>
         </Card>
+
+        </Link>
     );
 }
 export default PokemonCard;

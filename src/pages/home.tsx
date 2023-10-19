@@ -8,9 +8,7 @@ const Home = () => {
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
 
     useEffect(() => {
-        getPokemons().then((
-            pokemons
-        ) => {
+        getPokemons().then(( pokemons) => {
             setPokemonList(pokemons)
         });
 
