@@ -8,14 +8,14 @@ const Home = () => {
     const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
 
     useEffect(() => {
-        getPokemons().then(( pokemons) => {
+        getPokemons().then((pokemons) => {
             setPokemonList(pokemons)
         });
 
     }, []);
     return (
         <div>
-            <h1>Pokemon Card List</h1>
+            <h1 style={{textAlign: 'center'}}>Pokemon Card List</h1>
             <Box sx={{width: '100%'}}>
                 <Grid container rowSpacing={4} columnSpacing={{xs: 1, sm: 2, md: 3}}>
                     {pokemonList.map((pokemon) => (
