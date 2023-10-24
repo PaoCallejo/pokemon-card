@@ -19,7 +19,6 @@ export interface Pokemon {
         front_shiny_female: string;
       };
 }
-
 export const getPokemons = async (): Promise<Pokemon[]> => {
   try {
     const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=150");
@@ -50,7 +49,6 @@ export const getPokemons = async (): Promise<Pokemon[]> => {
     return [];
   }
 };
-
 export const getPokemonById = async (
   idPokemon: string,
 ): Promise<Pokemon | undefined> => {

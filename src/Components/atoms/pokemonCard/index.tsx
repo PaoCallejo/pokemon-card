@@ -13,10 +13,6 @@ const PokemonCard = ({ name = "", onClickPokemon }: PokemonCardProps) => {
   const handleClick = () => {
     onClickPokemon(urlDetail);
   };
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   return (
     <Card
       sx={{

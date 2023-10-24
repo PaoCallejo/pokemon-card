@@ -8,18 +8,10 @@ import { useGetByNameQuery } from "../utils/pokemonsApiRedux";
 
 const PokemonDetails = () => {
   const { name } = useParams();
-  /*const [pokemon, setPokemon] = useState<Pokemon | undefined>();
-  useEffect(() => {*/
   let pokemon!: Pokemon;
-  console.log(name);
   const { data } = useGetByNameQuery(name as string);
   pokemon = data as Pokemon;
-  /*getPokemonById(id).then((pokemon) => {
-        setPokemon(pokemon);
-      });*/
 
-  // }, []);
-  console.log(pokemon);
   return (
     <div>
       {pokemon && (
@@ -70,7 +62,6 @@ const PokemonDetails = () => {
                   </ul>
                 </div>
               </Typography>
-
               <Typography
                 variant="h5"
                 color="black"

@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import PokemonCard from "../../Components/atoms/pokemonCard";
@@ -11,28 +10,16 @@ import {
 const Home = (): any => {
   const navigate = useNavigate();
   const { data } = useGetAllPokemonsQuery();
-  console.log(data);
-  //const [pokemonList, setPokemonList] = useState<PokemonSimple[] | undefined>(
-  //  undefined,
-  //);
   let pokemonList: PokemonSimple[] = [];
-  //useEffect(() => {
   if (data) {
-    //console.log(data);
     const results = data!.results;
-    //console.log(results);
-
     pokemonList = results.map((pokemon: PokemonSimple) => {
       return {
         name: pokemon.name,
         url: pokemon.url,
       };
     });
-    //setPokemonList(mappedPokemonList);
-    //console.log(pokemonList);
   }
-  console.log(pokemonList);
-  //}, [data]);
 
   return (
     <div>

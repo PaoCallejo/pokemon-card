@@ -1,16 +1,7 @@
-import React, { useEffect, useState } from "react";
-
-import {
-  PokemonSimple,
-  useGetAllPokemonsQuery,
-  useGetByNameQuery,
-  Pokemon,
-} from "../../utils/pokemonsApiRedux";
+import { useGetByNameQuery } from "../../utils/pokemonsApiRedux";
 
 const Card = ({ name }: { name: string }) => {
   const { data } = useGetByNameQuery(name);
-  console.log(data);
-
   return (
     <div>
       {data ? (
