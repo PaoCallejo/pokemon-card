@@ -4,17 +4,13 @@ import { useParams } from "react-router-dom";
 import { getPokemonById, Pokemon } from "../utils/pokemonsApi";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
+import { useGetByNameQuery } from "../utils/pokemonsApiRedux";
 
 const PokemonDetails = () => {
-  const { id } = useParams();
-  const [pokemon, setPokemon] = useState<Pokemon | undefined>();
-  useEffect(() => {
-    if (id) {
-      getPokemonById(id).then((pokemon) => {
-        setPokemon(pokemon);
-      });
-    }
-  }, []);
+  const { name } = useParams();
+  let pokemon!: Pokemon;
+  const { data } = useGetByNameQuery(name as string);
+  pokemon = data as Pokemon;
 
   return (
     <div>
@@ -66,7 +62,6 @@ const PokemonDetails = () => {
                   </ul>
                 </div>
               </Typography>
-
               <Typography
                 variant="h5"
                 color="black"
