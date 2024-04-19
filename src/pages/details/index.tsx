@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import { useParams } from "react-router-dom";
-import { getPokemonById, Pokemon } from "../utils/pokemonsApi";
+import { Pokemon } from "../../utils/pokemonsApi";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { useGetByNameQuery } from "../utils/pokemonsApiRedux";
+import { useGetByNameQuery } from "../../utils/pokemonsApiRedux";
 
 const PokemonDetails = () => {
   const { name } = useParams();

@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { CardActionArea } from "@mui/material";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
-import PokemonCardProps from "./interface";
 import { useGetByNameQuery } from "../../../utils/pokemonsApiRedux";
+import PokemonCardProps from "./props";
 
 const PokemonCard = ({ name = "", onClickPokemon }: PokemonCardProps) => {
   const { data } = useGetByNameQuery(name);

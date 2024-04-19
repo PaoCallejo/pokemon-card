@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Home from "./pages/home/home";
+import Index from "./pages/home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PokemonDetails from "./pages/details";
 import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <ApiProvider api={pokemonApi}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Index />} />
           <Route path="/details/:name" element={<PokemonDetails />} />
         </Routes>
       </ApiProvider>
