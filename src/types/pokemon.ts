@@ -1,4 +1,4 @@
-interface Pokemon {
+type Pokemon = {
   id: string;
   name: string;
   image: string;
@@ -18,6 +18,6 @@ interface Pokemon {
         front_shiny: string;
         front_shiny_female: string;
       };
-}
+};
 
-export default Pokemon;
+export type { Pokemon };

@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import PokemonCard from "../../components/atoms/pokemonCard";
 import { useNavigate } from "react-router-dom";
-import { useGetAllPokemonsQuery } from "../../utils/pokemonsApiRedux";
+import { useGetAllPokemonsQuery } from "../../redux/services/pokemon";
 import PokemonSimple from "../../types/pokemonSimple";
 
 const Index = (): any => {

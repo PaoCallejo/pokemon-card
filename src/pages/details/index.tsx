@@ -1,10 +1,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { useParams } from "react-router-dom";
-import { Pokemon } from "../../utils/pokemonsApi";
+import { Pokemon } from "../../types";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { useGetByNameQuery } from "../../utils/pokemonsApiRedux";
+import { useGetByNameQuery } from "../../redux/services/pokemon";
 
 const PokemonDetails = () => {
   const { name } = useParams();

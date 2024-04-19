@@ -3,18 +3,18 @@ import "./App.css";
 import Index from "./pages/home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PokemonDetails from "./pages/details";
-import { ApiProvider } from "@reduxjs/toolkit/dist/query/react";
-import { pokemonApi } from "./utils/pokemonsApiRedux";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 function App() {
   return (
     <BrowserRouter>
-      <ApiProvider api={pokemonApi}>
+      <Provider store={store}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/details/:name" element={<PokemonDetails />} />
         </Routes>
-      </ApiProvider>
+      </Provider>
     </BrowserRouter>
   );
 }
