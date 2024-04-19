@@ -2,10 +2,13 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { Pokemon } from "../../types";
 
 // Define a service using a base URL and expected endpoints
+
+const URL = "https://pokeapi.co/api/v2";
+
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://pokeapi.co/api/v2",
+    baseUrl: URL,
   }),
   endpoints: (builder) => ({
     getAllPokemons: builder.query<{ results: any[] }, void>({

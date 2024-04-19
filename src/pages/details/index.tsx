@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Pokemon } from "../../types";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { useGetByNameQuery } from "../../redux/services/pokemon";
+import { useGetByNameQuery } from "../../redux/services/pokemonSlice";
 
 const PokemonDetails = () => {
   const { name } = useParams();

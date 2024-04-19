@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import PokemonCardProps from "./props";
-import { useGetByNameQuery } from "../../../redux/services/pokemon";
+import { useGetByNameQuery } from "../../../redux/services/pokemonSlice";
 
 const PokemonCard = ({ name = "", onClickPokemon }: PokemonCardProps) => {
   const { data } = useGetByNameQuery(name);
